@@ -16,13 +16,18 @@
   ],
   "description": "Enables multitouch swipe (backwards/forwards) in chrome as in OSX for windows notebooks with touchpads.",
   "name": "TouchpadSwipe",
+  "icons": {
+    "48": "swipe_icon.svg",
+    "96": "swipe_icon.svg"
+  },
   "options_ui": {
     "page": "options/options.html",
-    "chrome_style": true
+    "chrome_style": true,
+    "browser_style": true
   },
   "permissions": [
     "storage"
   ],
-  "version": "1.2.7",
-  "manifest_version": 2 
+  "version": "1.2.8",
+  "manifest_version": 2
 }

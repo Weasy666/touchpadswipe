@@ -12,102 +12,29 @@
         .success {
             color: #4BB543;
         }
-        /* Styles that fit with Firefox Options Page */
-        button {
-            background: #f9f9fa;
-            font-size: 11pt;
-            padding: 5px;
-            width: 100px;
-            text-align: center;
-            border: 1px solid #d7d7db;
-            border-radius: 2px;
-        }
-        button:hover {
-            background: #ebebeb;
-        }
-
-        /* Hide the browser's default checkbox */
-        .container-firefox input[type=checkbox] {
-            position: absolute;
-            opacity: 0;
-            height: 0;
-            width: 0;
-            visibility: hidden;
-        }
-
-        /* The container */
-        .container-firefox {
-            display: block;
-            position: relative;
-            font-size: 20px;
-        }
-
-        /* Create a custom checkbox */
-        .checkbox-firefox {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-top: 2px;
-            margin-left: 4px;
-            height: 20px;
-            width: 20px;
-            background-color: #ffffff;
-            border:1px solid #d7d7db;
-            border-radius: 2px;
-        }
-        .checkbox-firefox:hover {
-            border-color: #0a84ff;
-        }
-
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkbox-firefox:after {
-            content: "✔";
-            position: absolute;
-            display: none;
-            left: 1px;
-            top: -6px;
-            color: #2292d0;  
-        }
-
-        /* Show the checkmark when checked */
-        .container-firefox input[type=checkbox]:checked ~ .checkbox-firefox:after {
-            display: block;
-        }
-
-        .firefox-number {
-            -moz-appearance:textfield;
-            background-color: #ffffff;
-            font-size: 11pt;
-            padding: 5px;
-            text-align: center;
-            border: 1px solid #d7d7db;
-            border-radius: 2px;
-        }
-        .firefox-number:hover {
-            border-color: #0a84ff;
-        }
     </style>
 </head>
 <body>
 <p>If you like my plugin you can buy me a beer / coffee: <a href="https://www.paypal.me/koseduhemak" target="_blank">https://www.paypal.me/koseduhemak</a></p>
+<p>Icon made by <a href="https://www.flaticon.com/authors/pixel-perfect" target="_blank">Pixel perfect</a> from <a href="https://www.flaticon.com" target="_blank">www.flaticon.com</a></p>
 <table border="0" cellpadding="4" cellspacing="4">
     <tr>
         <td><label for="animations">Enable/Disable animations:</label></td>
-        <td class="container-firefox"><label><input type="checkbox" name="animations" id="animations"><span class="checkbox-firefox"></span></label></td>
+        <td><input type="checkbox" name="animations" id="animations"></td>
     </tr>
     <tr>
         <td><label for="reverse">Reverse scrolling:</label></td>
-        <td class="container-firefox"><label><input type="checkbox" name="reverse" id="reverse"><span class="checkbox-firefox"></span></label></td>
+        <td><input type="checkbox" name="reverse" id="reverse"></td>
     </tr>
     <tr>
         <td><label for="sensitivity">Current sensitivity: (Higher values = less sensitive, lower values = more sensitive)</label></td>
-        <td><input type="number" name="sensitivity" id="sensitivity" class="firefox-number"></td>
+        <td><input type="number" name="sensitivity" id="sensitivity"></td>
     </tr>
 </table>
 
 <div id="status"></div>
 <div>
-    <button id="save" style="float: right;">Save</button>
+    <button id="save" style="float: right;" class="browser-style">Save</button>
 </div>
 
 <script src="options.js"></script>
