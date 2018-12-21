@@ -12,6 +12,87 @@
         .success {
             color: #4BB543;
         }
+
+        button.browser-style {
+            border-radius: 2px;
+            height: 32px;
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        input[type="checkbox"].browser-style {
+            border-radius: 2px;
+        }
+
+        input[type="number"].browser-style {
+        -moz-appearance:textfield;
+        background-color: #fff;
+        border: 1px solid #b1b1b1;
+        box-shadow: 0 0 0 0 rgba(97, 181, 255, 0);
+        font: caption;
+        padding: 0 6px 0;
+        transition-duration: 250ms;
+        transition-property: box-shadow;
+        }
+
+        input[type="number"].browser-style {
+        height: 24px;
+        }
+
+        input[type="number"].browser-style.hover {
+        border: 1px solid #858585;
+        }
+
+        input[type="number"].browser-style:disabled {
+        color: #999;
+        opacity: .5;
+        }
+
+        input[type="number"].browser-style.focused{
+        border-color: #0996f8;
+        box-shadow: 0 0 0 2px rgba(97, 181, 255, 0.75);
+        }
+
+        /* Interactive States */
+        input[type="number"].browser-style:not(:disabled):hover {
+        border: 1px solid #858585;
+        }
+
+        input[type="number"].browser-style:focus,
+        input[type="number"].browser-style:focus:hover {
+        border-color: #0996f8;
+        box-shadow: 0 0 0 2px rgba(97, 181, 255, 0.75);
+        }
+
+        p, tr {
+            font-size: 15px;
+        }
+        a {
+            color: #0a84ff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:visited {
+            color: #0060df;
+        }
+        a:hover {
+            color: #0c0c0d;
+            text-decoration: underline;
+        }
+        a:not([class])[href*="//"]::after {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' width='24' height='24'><path clip-rule='evenodd' fill='#0c0c0d' fill-opacity='0.8' fill-rule='evenodd' d='M 7 5 a 2 2 0 0 0 -2 2 v 10 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 v -1 a 1 1 0 1 1 2 0 v 1 a 4 4 0 0 1 -4 4 H 7 a 4 4 0 0 1 -4 -4 V 7 a 4 4 0 0 1 4 -4 h 1 a 1 1 0 0 1 0 2 H 7 Z m 6 0 a 1 1 0 1 1 0 -2 h 7 a 1 1 0 0 1 1 1 v 7 a 1 1 0 1 1 -2 0 V 6.414 l -6.293 6.293 a 1 1 0 0 1 -1.414 -1.414 L 17.586 5 H 13 Z' /></svg>");
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+            content: "";
+            display: inline-block;
+            height: 16px;
+            margin: -.3rem .15rem 0 .25rem;
+            vertical-align: middle;
+            width: 16px;
+        }
     </style>
 </head>
 <body>
@@ -20,21 +101,21 @@
 <table border="0" cellpadding="4" cellspacing="4">
     <tr>
         <td><label for="animations">Enable/Disable animations:</label></td>
-        <td><input type="checkbox" name="animations" id="animations"></td>
+        <td><input type="checkbox" class="browser-style" name="animations" id="animations"></td>
     </tr>
     <tr>
         <td><label for="reverse">Reverse scrolling:</label></td>
-        <td><input type="checkbox" name="reverse" id="reverse"></td>
+        <td><input type="checkbox" class="browser-style" name="reverse" id="reverse"></td>
     </tr>
     <tr>
-        <td><label for="sensitivity">Current sensitivity: (Higher values = less sensitive, lower values = more sensitive)</label></td>
-        <td><input type="number" name="sensitivity" id="sensitivity"></td>
+        <td><label for="sensitivity">Current sensitivity: </label><label style="font-size: 11px;">(Higher values = less sensitive, lower values = more sensitive)</label></td>
+        <td><input type="number" class="browser-style" name="sensitivity" id="sensitivity"></td>
     </tr>
 </table>
 
 <div id="status"></div>
 <div>
-    <button id="save" style="float: right;" class="browser-style">Save</button>
+    <button id="save" class="browser-style" style="float: right;">Save</button>
 </div>
 
 <script src="options.js"></script>
